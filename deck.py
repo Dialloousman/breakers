@@ -1,19 +1,5 @@
-class Routine:
-    def __init__(self, person):
-        self.person = person
-
-    def morning(self):
-        print('good morning' + ' ' + self.person)
-    
-    def afternoon (self):
-        print('Hey {}, are you hungry yet?'.format(self.person))
-
-    def evening (self):
-        print('{}, its time for bed!'.format(self.person))
 
 
-SUITS = ["DIAMONDS", "SPADES", "HEARTS", "CLUBS"]
-VALUES = ["ACE", "TWO" , "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN", "JACK", "QUEEN", "KING"]
 
 class Card:
     def __init__(self, suit, value):
@@ -21,19 +7,27 @@ class Card:
         self.value = value
 
     def getSuit(self):
-        print(self.suit)
+        return(self.suit)
 
     def getValue(self):
-        print(self.value)
+        return(self.value)
+
+class Deck():
+    def __init__(self):
+        self.suits = ["DIAMONDS", "SPADES", "HEARTS", "CLUBS"]
+        self.values = ["ACE", "TWO" , "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN", "JACK", "QUEEN", "KING"]
+    
+    def num_cards(self):
+        return (len(self.suits) * len(self.values))
+
+    #shuffles the deck
+    def shuffle(self):
 
 
-# inhertiance example
-class Schedule(Routine):
-    def greeting():
-        pass
 
-monday = Card("ace", "diamonds", )
 
-monday.getValue()
+uno = Deck()
+
+print(uno.num_cards())
 
 
