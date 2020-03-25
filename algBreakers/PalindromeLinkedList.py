@@ -6,6 +6,17 @@
 
 # Attempt 3
 # Failed
+# Soltuion below:
+def isPalindrome(self, head):
+        slow = fast = head
+        rev = None
+        while fast and fast.next:
+            rev, rev.next, slow, fast = slow, rev, slow.next, fast.next.next
+        if fast: slow = slow.next
+        while slow and slow.val == rev.val:
+            slow, rev = slow.next, rev.next
+        return not slow
+
 # Attempted most optimal solution but bug in code 
 def isPalindrome(self, head: ListNode) -> bool:
         def reverseHalfList(node):
