@@ -1,3 +1,38 @@
+# Attempt: 5
+# Failed
+# Explanation: I'm looking to swap the pointers at the end of the initial traversal but having trouble doing so. If their is an intersection the pointers will meet but if there is not I run into an infinite loop
+
+# How long to solve: 30
+
+
+class Solution:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
+        if headA is None or headB is None:
+            return None
+        
+        currA = headA
+        currB = headB
+        nodeflag = 0
+        
+        while currA and currB and nodeflag <= 2:
+            if currA == currB:
+                return currA
+            
+            if currA.next is None:
+                currA = headB
+                nodeflag+=1
+                
+                
+            if currB.next is None:
+                currB = headA
+                nodeflag+=1
+                
+                
+            currA = currA.next
+            currB = currB.next
+            
+        
+        return None
 # Attempt: 4
 # Failed
 # Explanation: Used pointers to travese both list -> when either pointer hits hend we set pointer the oppostite list head -> This cancels node differences -> check for equality
