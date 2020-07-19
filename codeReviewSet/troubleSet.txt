@@ -1,0 +1,20 @@
+trouble - problems
+
+insert del get random in constant 
+max Prod Sub
+Target sum 
+min distance for t
+equal subset sum
+subset sum 
+constructor btree tree from pre-orde rand post
+daily temperatures
+structurally unique binary trees
+duplicate in array 
+min num of jumps 
+q reconstruction by height — custom sorts
+house robber 3
+find single element in array of duplicates : XOR - bit maniplation 
+
+
+avg - 40m per problem
+
